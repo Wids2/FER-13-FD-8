@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fer-13-FD-8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+  <br>
+  <button type="button" onclick="ascFunction()" class="btn btn-primary">Sort By Ascending</button>
+  <button type="button" onclick="descFunction()" class="btn btn-primary">Sort By Descending</button>
+
+
+  <br>
+  <br>
+  <div class="input-group mb-3">
+      <input type="text" id="inputSearch" type="text" class="form-control" placeholder="Search here...">
+      <button class="input-group-text btn btn-primary" onclick="searchFunction()">Search</button>
+  </div>
+
+  <script>
+
+     function ascFunction() {
+            var arrayOfNames = ["Bryan", "Axel", "Daniel", "Chelsea", "Ethan"];
+            arrayOfNames.sort();
+            console.log(arrayOfNames);
+        }
+
+        function descFunction() {
+            var arrayOfNames = ["Bryan", "Axel", "Daniel", "Chelsea", "Ethan"];
+            arrayOfNames.sort();
+            arrayOfNames.reverse();
+            console.log(arrayOfNames);
+        }
+
+        function searchFunction() {
+            var arrayOfNames = ["Bryan", "Axel", "Daniel", "Chelsea", "Ethan"];
+            var search = document.getElementById('inputSearch');
+            var hasil = search.value;
+            // console.log(search.value);
+
+            var result = arrayOfNames.includes(hasil)
+
+
+            if (result == true) {
+                console.log("ada");
+            } else {
+                console.log("Tidak ada");
+            }
+
+
+        }
+
+    </script>
+  </body>
+
+
+</html>
